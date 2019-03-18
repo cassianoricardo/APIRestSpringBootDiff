@@ -28,7 +28,7 @@ public class DiffController {
 	}
 	
 	@GetMapping("/{id}")
-	public boolean recuperarDiff(@PathVariable(value = "id") int id){
+	public boolean comparaDiff(@PathVariable(value = "id") int id){
 		return diffService.compareDiffs(id);
 	}
 	

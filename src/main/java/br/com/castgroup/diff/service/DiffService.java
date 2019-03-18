@@ -10,7 +10,7 @@ import br.com.castgroup.diff.model.Diff;
 @Service
 public class DiffService {
 
-	Map<Integer, Diff> diffs = new HashMap();
+	public Map<Integer, Diff> diffs = new HashMap<Integer, Diff>();
 
 	public void salvarDiffRight(String json, int id) {
 		salvarDiff("right", json, id);
