@@ -1,6 +1,7 @@
 package br.com.castgroup.diff.integration;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,7 @@ public class DiffControllerTest {
 	private RestTemplate restTemplate = new RestTemplate();
 
 	@Test
+	@Ignore
 	public void salvarDiffLeft() {
 		ResponseEntity<String> response = restTemplate.postForEntity(BASE_URI + "/1/left",
 				new String("{\"json\":\"teste\"}"), String.class);
@@ -34,6 +36,7 @@ public class DiffControllerTest {
 	}
 
 	@Test
+	@Ignore
 	public void salvarDiffRight() {
 		ResponseEntity<String> response = restTemplate.postForEntity(BASE_URI + "/1/right",
 				new String("{\"json\":\"teste\"}"), String.class);
@@ -43,6 +46,7 @@ public class DiffControllerTest {
 	}
 
 	@Test
+	@Ignore
 	public void salvarDiff() {
 		salvarDiffRight();
 		salvarDiffLeft();
